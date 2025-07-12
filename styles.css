@@ -1,0 +1,138 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f4f4f4;
+}
+
+header {
+  background: #222;
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.top-controls {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.top-controls input {
+  padding: 8px;
+  font-size: 14px;
+}
+
+.top-controls button {
+  padding: 8px 12px;
+  font-size: 14px;
+}
+
+.filters {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background: #fff;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.filters select, .filters button {
+  padding: 6px 10px;
+  font-size: 14px;
+  margin: 5px;
+}
+
+#employeeList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+  padding: 20px;
+}
+
+.employee-card {
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  padding: 15px;
+}
+
+.employee-card button {
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+footer {
+  background: #222;
+  color: #ccc;
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+.green-btn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+}
+
+.green-btn:hover {
+  background-color: #218838;
+}
+
+#notFoundMessage {
+  text-align: center;
+  margin-top: 20px;
+  display: none;
+  color: #555;
+}
+
+#formModal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+#formModalContent {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+}
+
+#formModalContent h2 {
+  margin-top: 0;
+}
+
+#employeeForm input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+#employeeForm button {
+  padding: 8px 12px;
+  margin-right: 10px;
+}
+
+@media (max-width: 600px) {
+  .filters {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
